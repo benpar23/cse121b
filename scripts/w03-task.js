@@ -55,7 +55,21 @@ const divideNumbers = function() {
 document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
 
 /* Decision Structure */
-document.querySelector("#getTotal").addEventListener("click", )
+function getTotal() {
+    let subtotal = Number(document.querySelector("#subtotal").value);
+
+    const member = document.querySelector("#member");
+
+    // member.addEventListener("click", true);
+
+    if (member) {
+        subtotal * 0.8;
+    }
+
+    document.querySelector("#total").innerHTML = `${subtotal}`;
+}
+
+document.querySelector("#getTotal").addEventListener("click", getTotal);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
