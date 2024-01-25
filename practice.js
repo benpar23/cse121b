@@ -1,6 +1,9 @@
-let x = 5;
-let y = 6;
+const buttonElement = document.getElementById("submitButton");
 
-let sum = x + y;
-
-console.log(sum)
+function copyInput(event) {
+    console.log(event);
+  const inputElement = document.getElementById("inputBox");
+  const outputElement = document.getElementById("output");
+  outputElement.innerHTML = inputElement.value;
+}
+buttonElement.addEventListener("click", copyInput);

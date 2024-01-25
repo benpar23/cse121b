@@ -11,6 +11,10 @@ function newTask() {
   // get the value entered into the #todo input
   // add it to our arrays tasks
   // render out the list.
+  const task = document.querySelector("#todo").value;
+  tasks.push(task);
+  
+
 }
 
 function removeTask(taskElement) {
