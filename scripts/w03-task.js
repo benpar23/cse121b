@@ -58,23 +58,43 @@ document.querySelector("#divideNumbers").addEventListener("click", divideNumbers
 function getTotal() {
     let subtotal = Number(document.querySelector("#subtotal").value);
 
-    const member = document.querySelector("#member");
+    let total;
 
-    // member.addEventListener("click", true);
+    let member = document.getElementById("member");
 
-    if (member) {
-        subtotal * 0.8;
-    }
+    if (member.checked) {
+        total = subtotal * 0.8;
+    } else {
+        total = subtotal;
+    } 
 
-    document.querySelector("#total").innerHTML = `${subtotal}`;
+    document.querySelector("#total").innerHTML = `$${total.toFixed(2)}`;
 }
 
 document.querySelector("#getTotal").addEventListener("click", getTotal);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
+let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+document.querySelector("#array").innerHTML = numberArray;
 
 /* Output Odds Only Array */
+
+function isOdd(num) {
+    let remainder = 0;
+    
+    numberArray.forEach(element => {
+       remainder = element % 2;
+    });
+    if (remainder == 1)
+
+}
+const oddNumbers = numberArray.filter((number) => {
+    if ((number % 2) == 1) {
+        
+    }
+})
 
 /* Output Evens Only Array */
 
