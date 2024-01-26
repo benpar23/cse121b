@@ -81,25 +81,35 @@ document.querySelector("#array").innerHTML = numberArray;
 
 /* Output Odds Only Array */
 
-function isOdd(num) {
-    let remainder = 0;
-    
-    numberArray.forEach(element => {
-       remainder = element % 2;
-    });
-    if (remainder == 1)
-
-}
 const oddNumbers = numberArray.filter((number) => {
     if ((number % 2) == 1) {
-        
+        return number;
     }
 })
 
+document.querySelector("#odds").innerHTML = oddNumbers;
+
 /* Output Evens Only Array */
 
+const evenNumbers = numberArray.filter((number) => {
+    if ((number % 2) != 1) {
+        return number;
+    }
+})
+
+document.querySelector("#evens").innerHTML = evenNumbers;
+
 /* Output Sum of Org. Array */
+const sumNumbers = numberArray.reduce((sum, number) => sum + number);
+
+document.querySelector("#sumOfArray").innerHTML = sumNumbers;
 
 /* Output Multiplied by 2 Array */
+const multiplyArray = numberArray.map(num => num * 2);
+
+document.querySelector("#multiplied").innerHTML = multiplyArray;
 
 /* Output Sum of Multiplied by 2 Array */
+const sumOfMultiplied = multiplyArray.reduce((sum, number) => sum + number);
+
+document.querySelector("#sumOfMultiplied").innerHTML = sumOfMultiplied;
