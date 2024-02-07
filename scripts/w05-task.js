@@ -38,15 +38,20 @@ const getTemples = async () => {
     displayTemples(templesList);
 }
 
-getTemples;
-
-console.log(templesList);
 
 /* reset Function */
-
+function reset() {
+    templesElement.innerHTML = "";
+}
 
 /* filterTemples Function */
+function filterTemples(temples) {
+    reset();
 
+    let filtered = document.querySelector("#filtered").value;
+
+    
+}
 
 getTemples();
 
