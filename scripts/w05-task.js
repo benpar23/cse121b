@@ -45,7 +45,7 @@ function reset() {
 }
 
 /* filterTemples Function */
-function filterTemples(temples) {
+function sortBy(temples) {
     reset();
 
     let filter = document.querySelector("#filtered").value;
@@ -69,6 +69,6 @@ function filterTemples(temples) {
 }
 
 /* Event Listener */
-document.querySelector("#filtered").addEventListener("change", () => {filterTemples(templesList)});
+document.querySelector("#filtered").addEventListener("change", () => {sortBy(templesList)});
 
 getTemples();
