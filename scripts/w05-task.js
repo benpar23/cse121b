@@ -48,11 +48,27 @@ function reset() {
 function filterTemples(temples) {
     reset();
 
-    let filtered = document.querySelector("#filtered").value;
+    let filter = document.querySelector("#filtered").value;
 
-    
+    switch (filter) {
+        case "utah":
+            const utah = temples.filter((temple) => temple['location'].includes('Utah'));
+            displayTemples(utah);
+            break;
+        case 'notutah':
+            const notUtah = temples.filter((temple) => !temple.location.includes('Utah'));
+            displayTemples(notUtah);
+            break;
+        case 'older':
+            const older = temples.filter((temple) => (new Date(temple.dedicated) < new Date(1950,0,1)));
+            displayTemples(older);
+            break;
+        case 'all':
+            displayTemples(temples);
+    }
 }
 
 getTemples();
 
 /* Event Listener */
+document.querySelector("#filtered").addEventListener("change", () => {filterTemples(templesList)});
