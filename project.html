@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <main>
+        <h1>Pokedex: 151 Pokemon</h1>
+
+        <div id="pokemon">
+        </div>
+    </main>
+    
+    <footer>
+        &copy;<span id="year"></span> | Final Project | CSE 121b
+      </footer>
+      <script src="scripts/main.js"></script>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
+      <script src="scripts/pokedex.js"></script>
+</body>
+</html>
