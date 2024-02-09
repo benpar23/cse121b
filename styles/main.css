@@ -311,6 +311,19 @@ footer {
     margin: .5rem;
 }
 
+#searchButton {
+    padding: .5rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
