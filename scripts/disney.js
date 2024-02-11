@@ -21,6 +21,8 @@ const displayDisneyChar = (disneyChar) => {
 }
 
 const getDisneyChar = async (charName) => {
+    disney.innerHTML = "";
+    
     const response = await fetch(`https://api.disneyapi.dev/character?name=${charName}`);
 
     if (response.ok){
@@ -31,3 +33,8 @@ const getDisneyChar = async (charName) => {
 
     displayDisneyChar(disneyList);    
 }
+
+
+let disneyCharacter = document.getElementById("search").value;
+
+document.querySelector("#searchButton").addEventListener("click", getDisneyChar(disneyCharacter));
