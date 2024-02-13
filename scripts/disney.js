@@ -38,6 +38,13 @@ const getDisneyChar = async (charName) => {
     displayDisneyChar(disneyList);    
 }
 
+document.getElementById("search").addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+        let disneyCharacter = document.getElementById("search").value;
+        getDisneyChar(disneyCharacter);
+    }
+})
+
 
 document.querySelector("#searchButton").addEventListener("click", () => {
     let disneyCharacter = document.getElementById("search").value;
