@@ -66,6 +66,7 @@ const displayFavorites = (favorites) => {
         buttonElement.textContent = "Remove";
         buttonElement.addEventListener("click", () => {
             favoritesList.splice(index, 1);
+            displayFavorites(favoritesList);
         })
 
         articleElement.appendChild(h3Element);
@@ -89,4 +90,6 @@ document.querySelector("#searchButton").addEventListener("click", () => {
     getDisneyChar(disneyCharacter);
 });
 
-document.querySelector("#favoriteListButton").addEventListener("click", (displayFavorites(favoritesList)))
+document.querySelector("#favoriteListButton").addEventListener("click", () => {
+    displayFavorites(favoritesList)
+})
