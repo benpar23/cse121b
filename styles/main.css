@@ -311,7 +311,7 @@ footer {
     margin: .5rem;
 }
 
-#searchButton {
+#searchButton, #favoriteListButton {
     padding: .5rem;
     background-color: #444;
     color: white;
