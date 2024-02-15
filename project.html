@@ -24,29 +24,26 @@
         <li><a href="project.html" class="active">Project</a></li>
     </ul>
   </nav>
-    <main>
-        <h1>Disney Characters</h1>
-        <h3>Which Character do you want to search for?</h3>
-                <div>
-                  <input type="text" id="search" name="search">
-                </div>
-                <div>
-                  <input type="button" id="searchButton" value="Search">
-                </div>
-                <div>
-                  <input type="button" id="favoriteListButton" value="View Favorites">
-                </div>
-        <div id="disney">
-        </div>
-    </main>
-    
-    <footer>
-        &copy;<span id="year"></span> | Final Project | CSE 121b
-      </footer>
-      <script src="scripts/main.js"></script>
-      <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-      </script>
-      <script src="scripts/disney.js"></script>
+  <main id="gridly">
+      <h1>Disney Characters</h1>
+      <h2>Which Character do you want to search for?</h2>
+      <div id="searchContainer">
+        <input type="text" id="search" placeholder="Enter character name">
+        <input type="button" id="searchButton" value="Search">
+      </div>
+      <div>
+        <input type="button" id="favoriteListButton" value="View Favorites">
+      </div>
+      <div id="disney">
+      </div>
+  </main>
+  <footer>
+      &copy;<span id="year"></span> | Final Project | CSE 121b
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/disney.js"></script>
 </body>
 </html>
