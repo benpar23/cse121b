@@ -283,6 +283,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
     grid-gap: .5rem;
+    justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
 }
@@ -290,9 +291,7 @@ footer {
 #disney article {
     height: 300px;
     margin: 0.5rem;
-    /* border: 1px solid rgba(0, 0, 0, .1); */
     padding: 0.5rem;
-    /* background-color: #eee; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,24 +310,24 @@ footer {
     margin: 1rem;
 }
 
-#searchContainer {
-    text-align: center; /* Center the input and buttons horizontally */
-    margin-bottom: 20px; /* Add some space between the search input and buttons */
-}
-
 #search {
     margin-right: 10px; /* Add some space between the search input and search button */
 }
 
 #searchButton, #favoriteListButton {
-    width: 100px;
+    width: 200px;
     padding: .5rem;
     background-color: #444;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
+    /* display: block; */
+}
+
+#searchContainer {
+    text-align: center; /* Center the input and buttons horizontally */
+    margin-bottom: 20px; /* Add some space between the search input and buttons */
 }
 
 /* Media Queries */
